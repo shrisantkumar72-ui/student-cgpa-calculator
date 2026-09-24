@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student CGPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎓 Student CGPA Calculator</h1>
+            <p>Calculate your marks, grades and CGPA</p>
+        </header>
+
+        <section class="student-card">
+
+            <h2>Student Details</h2>
+
+            <label>Student Name</label>
+            <input type="text" id="studentName"
+                   placeholder="Enter your name">
+
+            <label>Roll Number</label>
+            <input type="text" id="rollNumber"
+                   placeholder="Enter roll number">
+
+            <label>Semester</label>
+            <select id="semester">
+                <option value="">Select Semester</option>
+                <option>1st Semester</option>
+                <option>2nd Semester</option>
+                <option>3rd Semester</option>
+                <option>4th Semester</option>
+                <option>5th Semester</option>
+                <option>6th Semester</option>
+                <option>7th Semester</option>
+                <option>8th Semester</option>
+            </select>
+
+        </section>
+
+
+        <section class="subject-card">
+
+            <div class="section-heading">
+                <h2>Subjects</h2>
+
+                <button id="addSubjectBtn">
+                    + Add Subject
+                </button>
+            </div>
+
+            <div id="subjectsContainer">
+
+                <div class="subject-row">
+
+                    <input type="text"
+                           placeholder="Subject Name">
+
+                    <input type="number"
+                           placeholder="Credits">
+
+                    <input type="number"
+                           placeholder="Marks"
+                           min="0"
+                           max="100">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="result-card">
+
+            <h2>Result</h2>
+
+            <div class="result-box">
+                <span>SGPA</span>
+                <strong id="sgpa">0.00</strong>
+            </div>
+
+            <div class="result-box">
+                <span>Percentage</span>
+                <strong id="percentage">0%</strong>
+            </div>
+
+            <div class="result-box">
+                <span>Grade</span>
+                <strong id="overallGrade">-</strong>
+            </div>
+
+            <button id="calculateBtn">
+                Calculate Result
+            </button>
+
+            <button id="resetBtn">
+                Reset
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
